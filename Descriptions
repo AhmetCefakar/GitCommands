@@ -1,0 +1,18 @@
+1_) Logların Tek Satırda Alınması: "git log --all --oneline --decorate --graph", "git log <repoNama>/<BranchName> --oneline --decorate"
+2_) Eski bir Commit'e Tamamen dönmek: "git checkout <commitID>"
+3_) Eski bir Commit'e Dosya Bazında dönmek: "git checkout <commitID> -- <filename>"
+4_) İki Dalı Birleştirme: Birleştirmenin yapılacağı dal 'Head' yapılır ve "git merge <Head'e Birleşecek Dal Adı>"
+5_) Bir Dalı Silmek: "git branch -d <Silinecek Dal Adı>"
+6_) Birleştirme Sırasında Çatışma(Conflict) Durumlarında:Çatışmanın olduğu her bir dosya için işlem ayrı ayrı yapılıyor "git checkout --theirs <Dosya Adı>" "git checkout --ours <Dosya Adı>", burada 'ours' ile Head durumundaki Branch'taki dosya kabul edilir, 'theirs' ile birleştirilmek istenen Branch'taki dosya kabul edilir.
+7_) Kullanıcı Bilgilerini Listelemek: " git config --global -l"
+8_) Bir Klasöre Bir Yerle İlişkilendirilmemiş Git Deposu Kurmak: "git init --bare <filename>" bu komutun çalıştırıldığı konumda yeni bir klasör oluşturulur ve içine Git dosyaları atılır, bu kullanım genelde local sunucularda Git reposu oluşturmak için kullanılıyor.
+9_) Son local Commit'i güncellemek: 'Staging Area'da yapılan değişiklikleri son komite eklemek için "git commit --amend --no-edit" komutu kullanılır
+10_) Remote repo pull processing: "git pull origin master" 
+11_) Remote repo push proccessing: "git push origin master", this command push current branch(head) to remote repo master branch. 
+12_) Remote repo log learning: "git log --oneline <RemoteRepoName>/<RemoteBranchName>"
+13_) Her hangi bir commit'e geri gelmek: Bu işlem biraz karışıktır ve birden fazla yöntemi vardır;
+	13.0.1_) "git reset --soft <commit Id>"  # Bu işlemde id değeri girilen commit'e geri dönülür ama çalışma alanındaki değişiklikler korunarak bu işlem yapılır, arada kalan bütün commitler artık commit history'sinden ulaşılamaz hale gelir.
+	13.1_) Bir önceki commit'e geri gidilecekse işlem nispeten kolay sayılabilir ve ek dal çıkmadan devam edilir.
+	13.2_) Bir öncekinden daha eski commit'e gidilecekse bu işlemde çalışma alanındaki son değişikliklerin korunma-korunmama durumuna göre yaklaşımlar dallanabiliyor.
+14_) Son yapılan commit'e açıklamayı değiştirmeden başka değişiklikleri dahil etmek: " git commit --amend --no-edit" komutu ile yapılır.
+15_) Son yapılan commit'in açıklamasını değiştirmek : "git commit --amend -m "<New commit message>""
