@@ -16,3 +16,6 @@
 	13.2_) Bir öncekinden daha eski commit'e gidilecekse bu işlemde çalışma alanındaki son değişikliklerin korunma-korunmama durumuna göre yaklaşımlar dallanabiliyor.
 14_) Son yapılan commit'e açıklamayı değiştirmeden başka değişiklikleri dahil etmek: " git commit --amend --no-edit" komutu ile yapılır.
 15_) Son yapılan commit'in açıklamasını değiştirmek : "git commit --amend -m "<New commit message>""
+16_) Bir brach'a marge işlemini comment Line ile yapmak: Oku -> "https://stackoverflow.com/questions/14046122/github-locks-up-mac-terminal-when-using-pull-command"
+
+
